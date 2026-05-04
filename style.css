@@ -1,0 +1,73 @@
+/* Minimalist CSS for all Fysik 1 pages */
+:root {
+  --bg: #ffffff;
+  --text: #111;
+  --muted: #666;
+  --accent: #0b5fff;
+  --container-w: 860px;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.navbar {
+  background: #f3f5f7;
+  padding: 12px;
+  border-bottom: 1px solid #e6e9ee;
+}
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+}
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+.nav-links a:hover {
+  background: rgba(11, 95, 255, 0.06);
+  color: var(--accent);
+}
+
+.container {
+  max-width: var(--container-w);
+  margin: 28px auto;
+  padding: 18px;
+}
+h1 {
+  margin-top: 0;
+}
+.muted {
+  color: var(--muted);
+}
+
+footer {
+  padding: 14px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Simple responsive - stack nav on small screens */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .container {
+    padding: 14px;
+    margin: 18px;
+  }
+}
