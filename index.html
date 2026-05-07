@@ -1,15 +1,21 @@
 <!doctype html>
 <html lang="sv">
   <head>
+    <!-- Metadata: teckenkod och responsiv vy -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Sidtitel som visas i fliken -->
     <title>Fysik 1 - Startsida</title>
+    <!-- Länkar till gemensam CSS för sidan -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <!-- id="home" används av script.js för att veta att quiz ska visas här -->
+  <body id="home">
+    <!-- Huvudmeny / navigering -->
     <header class="navbar">
       <nav>
         <ul class="nav-links">
+          <!-- Länkar till andra sidor i samma mapp -->
           <li><a href="index.html">Hem</a></li>
           <li><a href="rorelse.html">Rörelse</a></li>
           <li><a href="krafter.html">Krafter</a></li>
@@ -20,8 +26,10 @@
       </nav>
     </header>
 
+    <!-- Huvudinnehåll som centreras av .container i CSS -->
     <main class="container">
       <h1>Välkommen till Fysik 1</h1>
+      <!-- Muted-klass ger mindre framträdande text via CSS -->
       <p class="muted">
         Lär dig grunderna i mekanik, vågor och energi. Välj ett ämne i menyn för
         att läsa en enkel förklaring.
@@ -35,8 +43,15 @@
           förklaringar av varje del.
         </p>
       </section>
+
+      <!-- plats där quiz läggs in -->
+      <div id="quiz-root"></div>
     </main>
 
+    <!-- Enkel sidfot -->
     <footer>© 2026 Fysik 1 - Enkel övningssajt</footer>
+
+    <!-- Laddar script.js för hela webbplatsen; script.js visar quiz endast när body id="home" -->
+    <script src="script.js"></script>
   </body>
 </html>
