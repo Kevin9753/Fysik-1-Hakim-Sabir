@@ -1,1 +1,0 @@
-# Fysik-1-Hakim-Sabir

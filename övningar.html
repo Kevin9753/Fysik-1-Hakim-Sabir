@@ -1,18 +1,17 @@
 <!doctype html>
 <html lang="sv">
   <head>
-  <!-- Teckenkod och mobilvy -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Om - Fysik 1</title>
-  <!-- Gemensam CSS -->
+    <title>Quiz - Fysik 1</title>
+    <!-- Länkar till gemensam CSS för sidan -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-  <!-- Navigering -->
+  <body id="home">
     <header class="navbar">
       <nav>
         <ul class="nav-links">
+          <!-- Länkar till andra sidor i samma mapp -->
           <li><a href="index.html">Hem</a></li>
           <li><a href="rorelse.html">Rörelse</a></li>
           <li><a href="krafter.html">Krafter</a></li>
@@ -23,24 +22,22 @@
       </nav>
     </header>
 
-  <!-- Innehåll -->
     <main class="container">
-      <h1>Om den här sidan</h1>
-      <!-- Förklarande text som är mindre framträdande -->
-      <p class="muted">En enkel introduktion till grunderna i Fysik 1.</p>
+      <h1>Övningsquiz — 10 frågor</h1>
+      <p class="muted">Välj det svar du tror är rätt. Enkla frågor i Fysik 1.</p>
 
-      <p>
-        Den här webbplatsen är avsedd att ge korta, lättförståeliga förklaringar
-        om centrala begrepp i Fysik 1: rörelse, krafter, vågor och energi. Den
-        passar som repetitionsmaterial eller som stöd under olika moment i
-        kursen.
-      </p>
+      <div id="quiz-container">
+        <div id="question-box"></div>
+        <ul id="answers-list"></ul>
+        <div class="quiz-controls">
+          <button id="next-btn" class="btn">Nästa</button>
+        </div>
+        <div id="result" style="display:none;"></div>
+      </div>
     </main>
 
-  <!-- Sidfot -->
     <footer>© 2026 Fysik 1</footer>
 
-    <!-- Samma script laddas på alla sidor; det körs men visar quiz endast på startsidan -->
     <script src="script.js"></script>
   </body>
 </html>

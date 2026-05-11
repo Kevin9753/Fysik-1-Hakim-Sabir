@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="sv">
   <head>
-    <!-- Metadata: teckenkod och responsiv vy -->
+  <!-- Teckenkod och mobilvy -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Sidtitel som visas i fliken -->
+  <!-- Sidans titel -->
     <title>Fysik 1 - Startsida</title>
     <!-- Länkar till gemensam CSS för sidan -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <!-- id="home" används av script.js för att veta att quiz ska visas här -->
+  <!-- id="home" används av script.js för att visa quiz på startsidan -->
   <body id="home">
-    <!-- Huvudmeny / navigering -->
+  <!-- Navigering -->
     <header class="navbar">
       <nav>
         <ul class="nav-links">
@@ -26,10 +26,10 @@
       </nav>
     </header>
 
-    <!-- Huvudinnehåll som centreras av .container i CSS -->
+  <!-- Huvudinnehåll -->
     <main class="container">
       <h1>Välkommen till Fysik 1</h1>
-      <!-- Muted-klass ger mindre framträdande text via CSS -->
+  <!-- Mindre framträdande hjälptrad -->
       <p class="muted">
         Lär dig grunderna i mekanik, vågor och energi. Välj ett ämne i menyn för
         att läsa en enkel förklaring.
@@ -44,14 +44,14 @@
         </p>
       </section>
 
-      <!-- plats där quiz läggs in -->
-      <div id="quiz-root"></div>
+  <!-- Gå till quiz -->
+    <p><a class="btn" href="övningar.html">Ta quizet (10 frågor)</a></p>
     </main>
 
-    <!-- Enkel sidfot -->
+  <!-- Sidfot -->
     <footer>© 2026 Fysik 1 - Enkel övningssajt</footer>
 
-    <!-- Laddar script.js för hela webbplatsen; script.js visar quiz endast när body id="home" -->
+  <!-- Laddar script.js för hela webbplatsen; script.js visar quiz endast när body id="home" -->
     <script src="script.js"></script>
   </body>
 </html>
