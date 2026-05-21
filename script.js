@@ -77,7 +77,7 @@ function renderQuestion() {
     li.innerHTML = `<label><input type="radio" name="answer" value="${i}"> ${ans}</label>`;
     answersList.appendChild(li);
   });
-  // disable next until chosen
+  
   nextBtn.disabled = true;
 }
 
