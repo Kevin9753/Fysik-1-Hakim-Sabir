@@ -1,5 +1,6 @@
 // Enkel quiz-logik för Övningar (10 flervalsfrågor)
 
+// Frågor och svar lagras i en lista med objekt
 const quiz = [
   {
     q: "Vad kallas den hastighet ett föremål har vid ett givet ögonblick?",
@@ -59,15 +60,18 @@ const quiz = [
   },
 ];
 
+// Håller koll på aktuell fråga och poäng
 let current = 0;
 let score = 0;
 
+// Hämta element från HTML
 const qBox = document.getElementById("question-box");
 const answersList = document.getElementById("answers-list");
 const nextBtn = document.getElementById("next-btn");
 const resultDiv = document.getElementById("result");
 
 function renderQuestion() {
+  // Visa fråga och svarsalternativ
   const item = quiz[current];
   qBox.textContent = `${current + 1}. ${item.q}`;
   answersList.innerHTML = "";
@@ -77,14 +81,16 @@ function renderQuestion() {
     li.innerHTML = `<label><input type="radio" name="answer" value="${i}"> ${ans}</label>`;
     answersList.appendChild(li);
   });
-  // disable next until chosen
+  // Nästa-knappen är avstängd tills användaren väljer ett svar
   nextBtn.disabled = true;
 }
 
+// Lyssna efter val av svar
 answersList?.addEventListener("change", (e) => {
-  if (e.target && e.target.name === "answer") nextBtn.disabled = false;
+  if (e.target.name === "answer") nextBtn.disabled = false;
 });
 
+// Nästa-knapp tryckt
 nextBtn.addEventListener("click", () => {
   const selected = document.querySelector('input[name="answer"]:checked');
   if (!selected) return;
@@ -99,6 +105,7 @@ nextBtn.addEventListener("click", () => {
 });
 
 function showResult() {
+  // Visa resultatet när quizet är klart
   qBox.style.display = "none";
   answersList.style.display = "none";
   nextBtn.style.display = "none";
@@ -106,5 +113,5 @@ function showResult() {
   resultDiv.innerHTML = `<h3>Resultat</h3><p>Du fick ${score} av ${quiz.length} rätt.</p><p><a class="btn" href="index.html">Tillbaka</a></p>`;
 }
 
-// Init
+// Initiera quizet om alla element finns
 if (qBox && answersList && nextBtn) renderQuestion();

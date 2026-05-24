@@ -1,43 +1,46 @@
 <!doctype html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz - Fysik 1</title>
-    <!-- Länkar till gemensam CSS för sidan -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body id="home">
-    <header class="navbar">
-      <nav>
-        <ul class="nav-links">
-          <!-- Länkar till andra sidor i samma mapp -->
-          <li><a href="index.html">Hem</a></li>
-          <li><a href="rorelse.html">Rörelse</a></li>
-          <li><a href="krafter.html">Krafter</a></li>
-          <li><a href="vagor.html">Vågor</a></li>
-          <li><a href="energi.html">Energi</a></li>
-          <li><a href="about.html">Om</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main class="container">
-      <h1>Övningsquiz — 10 frågor</h1>
-      <p class="muted">Välj det svar du tror är rätt. Enkla frågor i Fysik 1.</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz - Fysik 1</title>
+  <!-- Länkar till gemensam CSS för sidan -->
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-      <div id="quiz-container">
-        <div id="question-box"></div>
-        <ul id="answers-list"></ul>
-        <div class="quiz-controls">
-          <button id="next-btn" class="btn">Nästa</button>
-        </div>
-        <div id="result" style="display:none;"></div>
+<body id="home">
+  <header class="navbar">
+    <nav>
+      <ul class="nav-links">
+        <!-- Länkar till andra sidor i samma mapp -->
+        <li><a href="index.html">Hem</a></li>
+        <li><a href="rorelse.html">Rörelse</a></li>
+        <li><a href="krafter.html">Krafter</a></li>
+        <li><a href="vagor.html">Vågor</a></li>
+        <li><a href="energi.html">Energi</a></li>
+        <li><a href="about.html">Om</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Övningsquiz — 10 frågor</h1>
+    <p class="muted">Välj det svar du tror är rätt. Enkla frågor i Fysik 1.</p>
+
+    <div id="quiz-container">
+      <div id="question-box"></div>
+      <ul id="answers-list"></ul>
+      <div class="quiz-controls">
+        <button id="next-btn" class="btn">Nästa</button>
       </div>
-    </main>
+      <div id="result" style="display:none;"></div>
+    </div>
+  </main>
 
-    <footer>© 2026 Fysik 1</footer>
+  <footer>© 2026 Fysik 1</footer>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>
