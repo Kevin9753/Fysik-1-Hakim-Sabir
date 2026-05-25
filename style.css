@@ -82,13 +82,30 @@ footer {
   border-radius: 6px;
   text-decoration: none;
 }
-.btn:hover { opacity: 0.95; }
+.btn:hover {
+  opacity: 0.95;
+}
 
-#quiz-container { background: #fff; padding: 16px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
-#answers-list { list-style: none; padding: 0; margin: 12px 0; }
-.answer-item { margin: 8px 0; }
-.quiz-controls { margin-top: 12px; }
-.quiz-controls .btn { background: var(--accent); }
+#quiz-container {
+  background: #fff;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+#answers-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+.answer-item {
+  margin: 8px 0;
+}
+.quiz-controls {
+  margin-top: 12px;
+}
+.quiz-controls .btn {
+  background: var(--accent);
+}
 
 /* Responsiv: stapla nav på små skärmar */
 @media (max-width: 600px) {
