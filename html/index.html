@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="sv">
   <head>
-  <!-- Teckenkod och mobilvy -->
+    <!-- Teckenkod och mobilvy -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Sidans titel -->
+    <!-- Sidans titel -->
     <title>Fysik 1 - Startsida</title>
     <!-- Länkar till gemensam CSS för sidan -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <!-- id="home" används av script.js för att visa quiz på startsidan -->
   <body id="home">
-  <!-- Navigering -->
+    <!-- Navigering -->
     <header class="navbar">
       <nav>
         <ul class="nav-links">
@@ -26,10 +26,10 @@
       </nav>
     </header>
 
-  <!-- Huvudinnehåll -->
+    <!-- Huvudinnehåll -->
     <main class="container">
       <h1>Välkommen till Fysik 1</h1>
-  <!-- Mindre framträdande hjälptrad -->
+      <!-- Mindre framträdande hjälptrad -->
       <p class="muted">
         Lär dig grunderna i mekanik, vågor och energi. Välj ett ämne i menyn för
         att läsa en enkel förklaring.
@@ -44,14 +44,26 @@
         </p>
       </section>
 
-  <!-- Gå till quiz -->
-    <p><a class="btn" href="övningar.html">Ta quizet (10 frågor)</a></p>
+      <!-- Gå till quiz -->
+      <p><a class="btn" href="övningar.html">Ta quizet (10 frågor)</a></p>
     </main>
 
-  <!-- Sidfot -->
-    <footer>© 2026 Fysik 1 - Enkel övningssajt</footer>
+    <!-- Sidfot -->
+    <footer>
+      © 2026 Fysik 1 - Enkel övningssajt
 
-  <!-- Laddar script.js för hela webbplatsen; script.js visar quiz endast när body id="home" -->
-    <script src="script.js"></script>
+      <p>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+          <img
+            style="border: 0; width: 88px; height: 31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!"
+          />
+        </a>
+      </p>
+    </footer>
+
+    <!-- Laddar script.js för hela webbplatsen; script.js visar quiz endast när body id="home" -->
+    <script src="../js/script.js"></script>
   </body>
 </html>
