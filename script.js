@@ -115,3 +115,24 @@ function showResult() {
 
 // Initiera quizet om alla element finns
 if (qBox && answersList && nextBtn) renderQuestion();
+
+function calculate() {
+  let input = document.getElementById("calc-input").value;
+  escapeHtml(input);
+  try {
+    let result = eval(input);
+    document.getElementById("calc-result").innerText = input + " = " + result;
+  } catch {
+    document.getElementById("calc-result").innerText = "Ogiltigt uttryck";
+  }
+}
+
+function escapeHtml(text) {
+  //det här är koden som gör att en XSS attack inte är möjlig. Den byter ut alla tecken som kan leda till en XSS attack mot bokstäver som förstör den attacken
+  return String(text)
+    .replace(/&/g, "&amp;") // '&' byts ut till '&amp' osv. för varje rad
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
